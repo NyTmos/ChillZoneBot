@@ -20,13 +20,6 @@ client.on('message', message => {
 });
 
 
-if (message.content.startsWith(`${prefix}dev`)) {
-	message.channel.send('Test');
-} else if (message.content.startsWith(`${prefix}beep`)) {
-	message.channel.send('Boop.');
-}
-
-
 
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
