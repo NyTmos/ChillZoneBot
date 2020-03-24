@@ -8,11 +8,9 @@ client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`); 
 });
 
-client.on('message', message => {
-	console.log(message.content);
-});
 
 client.on('message', message => {
+	console.log(message.content);
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
