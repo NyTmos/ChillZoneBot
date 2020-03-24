@@ -4,18 +4,14 @@ const client = new Discord.Client();
 
 
 client.on("ready", () => {
-    console.log(`Hi, ${client.user.username} is now online!`);
-
-    client.user.setPresence({
-        status: "online",
-        game: {
-            name: "me getting developed",
-            type: "STREAMING"
-        }
-    }); 
+    console.log(`Hi, ${client.user.username} is now online!`); 
 });
 
 
+client.user.setActivity("with depression", {
+  type: "STREAMING",
+  url: "https://www.twitch.tv/example-url"
+});
 
 
 
