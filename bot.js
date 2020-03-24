@@ -8,24 +8,10 @@ client.on("ready", () => {
 });
 
 
-client.on('message', message => {
-	if (message.content === '!play') {
-		if (message.channel.type !== 'text') return;
+if (message.content === '!react-custom') {
+	message.react('690254803062095922');
+}
 
-		const voiceChannel = message.member.voice.channel;
-
-		if (!voiceChannel) {
-			return message.reply('please join a voice channel first!');
-		}
-
-		voiceChannel.join().then(connection => {
-			const stream = ytdl('https://www.youtube.com/watch?v=D57Y1PruTlw', { filter: 'audioonly' });
-			const dispatcher = connection.play(stream);
-
-			dispatcher.on('end', () => voiceChannel.leave());
-		});
-	}
-});
 
 
 client.on('message', message => {
