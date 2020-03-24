@@ -8,12 +8,6 @@ client.on("ready", () => {
 });
 
 
-if (message.content === '!react-custom') {
-	message.react('690254803062095922');
-}
-
-
-
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
