@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 
 client.commands = new Collection();
-client.aliases = new Collection();
 
 client.categories = fs.readdirSync("./commands/");
 
