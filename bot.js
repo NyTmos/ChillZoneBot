@@ -15,7 +15,7 @@ client.on("ready", () => {
 })
 
 client.on("message", async message => {
-    const prefix = "_";
+    const prefix = ".";
 
     // If the author's a bot, return
     // If the message was not sent in a server, return
@@ -40,6 +40,20 @@ client.on("message", async message => {
         // Edit the message
         msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - message.createdTimestap)}ms\nAPI Latency is ${Math.round(client.ping)}ms`);
     }
+    
+  /////////////////////////////////////////////////////////////////////////////////  
+    
+     if (cmd === "dev") {
+        // Send a message
+        const msg = await message.channel.send(`💿 Loading....`);
+
+        // Edit the message
+        msg.edit(`🛠 **Comming Soon** 🛠! \nA-Team`);
+    }   
+    
+    
+    /////////////////////////////////////////////////////////////////////////////////    
+    
 
     if (cmd === "say") {
         // Check if you can delete the message
@@ -67,15 +81,9 @@ client.on("message", async message => {
     }
 });
 
-// Create an event listener for new guild members
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.cache.find(ch => ch.name === 'global-chat);
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
-});
+
+  /////////////////////////////////////////////////////////////////////////////////  
+
 
 
 // THIS  MUST  BE  THIS  WAY
