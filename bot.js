@@ -8,7 +8,7 @@ client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`); 
 });
 
-client.user.setGame("Game");
+
 
 client.on('message', message => {
 	console.log(message.content);
